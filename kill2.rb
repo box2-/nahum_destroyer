@@ -16,7 +16,7 @@ require 'openssl'
 require 'thread'
 require 'eventmachine'
 
-server = 'irc.haxnet.org'
+server = 'irc.xxxxxx.org'
 port = '6697'
 channel = '#watbot'
 nick = 'grundle'
@@ -36,10 +36,6 @@ class IRC
  
     say "NICK #{@bot[:nick]}"
     say "USER #{@bot[:nick]} 0 * ."
-
-    # this method sucks
-    # sleeping 2 seconds to wait for irc connection to fully register me as a user
-    sleep 2
     say "JOIN #{@bot[:channel]}"
   end
   
